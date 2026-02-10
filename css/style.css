@@ -43,11 +43,13 @@
 /* DIVIDER */
 .divider {
     height: 4px;
-    background: #555;
+    background: #6a2c91; /* ungu baru */
     border: none;
 
-    position: sticky;
-    top: 72px; /* tinggi header */
+    position: fixed;
+    top: 72px; /* tepat di bawah header */
+    left: 0;
+    width: 100%;
     z-index: 99;
 }
 
