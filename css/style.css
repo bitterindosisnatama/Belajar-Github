@@ -1,142 +1,55 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Bitterbar.Universe</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
-/* NAVBAR ATAS */
-.navbar-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #3b1361;
-    color: white;
-}
+<!-- TOP BAR -->
+<header class="top-bar">
+    <div class="hamburger" id="hamburger">☰</div>
+</header>
 
-.logo-area img {
-    width: 150px;
-}
+<!-- NAVBAR DRAWER -->
+<nav class="side-nav" id="sideNav">
 
-.logo-area {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
+    <div class="nav-brand">
+        <img src="Logo/logo-bitterbar-universe.png" alt="Bitterbar Universe">
+        <h2>Bitterbar.Universe</h2>
+    </div>
 
-.logo-area span {
-    color: #d4b000; /* kuning sedikit tua */
-    font-size: 14px;
-}
+    <ul class="nav-menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Artikel</a></li>
+        <li><a href="#">Resep</a></li>
+        <li><a href="#">Resep Premium</a></li>
+        <li><a href="#">Info</a></li>
+        <li><a href="#">Kontak Kami</a></li>
+    </ul>
 
-.hamburger {
-    font-size: 28px;
-    cursor: pointer;
-}
+    <div class="nav-footer">
+        <img src="Logo/logo-bitter-indo-sisnatama.png" alt="Bitter Indo Sisnatama">
+        <p>Powered by Bitter Indo Sisnatama</p>
+    </div>
 
-/* NAVBAR DINAMIS */
-.navbar-dynamic {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 260px;
-    background-color: purple;
-    padding: 20px;
-    transform: scaleX(0);
-    transform-origin: left;
-    z-index: 999;
-    overflow: hidden;
-}
+</nav>
 
-.navbar-dynamic ul {
-    list-style: none;
-    margin-top: 80px;
-}
+<!-- HOME BRANDING -->
+<section class="home-brand">
+    <img src="Logo/logo-bitterbar-universe.png" alt="Bitterbar Universe">
+    <h1>Bitterbar.Universe</h1>
+</section>
 
-.navbar-dynamic ul li {
-    margin: 15px 0;
-}
+<script>
+const hamburger = document.getElementById("hamburger");
+const sideNav = document.getElementById("sideNav");
 
-.navbar-dynamic ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-}
+hamburger.addEventListener("click", () => {
+    sideNav.classList.toggle("active");
+});
+</script>
 
-/* LOGO BAWAH */
-.powered {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.powered img {
-    width: 30px;
-}
-
-.powered p {
-    font-size: 12px;
-    color: white;
-}
-
-/* HOME */
-.home {
-    padding: 80px 20px;
-}
-
-/* ANIMATION */
-.scale-in-hor-left {
-    -webkit-animation: scale-in-hor-left 0.5s cubic-bezier(0.645, 0.045, 0.355, 1.000) both;
-    animation: scale-in-hor-left 0.5s cubic-bezier(0.645, 0.045, 0.355, 1.000) both;
-}
-
-@-webkit-keyframes scale-in-hor-left {
-    0% {
-        -webkit-transform: scaleX(0);
-        transform: scaleX(0);
-    }
-    100% {
-        -webkit-transform: scaleX(1);
-        transform: scaleX(1);
-    }
-}
-
-@keyframes scale-in-hor-left {
-    0% {
-        transform: scaleX(0);
-    }
-    100% {
-        transform: scaleX(1);
-    }
-}
-
-.navbar-dynamic {
-    visibility: hidden;
-}
-.navbar-dynamic.active {
-    visibility: visible;
-}
-
-.brand-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 40px 20px 20px;
-    background-color: #ffffff;
-}
-
-.brand-header img {
-    width: 180px;
-}
-
-.brand-header h1 {
-    margin-top: 10px;
-    font-size: 32px;
-    font-weight: bold;
-    color: #d4b000; /* kuning sedikit tua */
-}
+</body>
+</html>
