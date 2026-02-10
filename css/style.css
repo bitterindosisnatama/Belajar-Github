@@ -1,47 +1,114 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <title>Bitterbar.Universe</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
 
-<!-- NAVBAR STATIC (LOGO + HAMBURGER) -->
-<header class="navbar-top">
-    <div class="logo-area">
-        <img src="Logo/logo-bitterbar-universe.png" alt="Bitterbar Universe Logo">
-        <span>Bitterbar.Universe</span>
-    </div>
+/* NAVBAR ATAS */
+.navbar-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #3b1361;
+    color: white;
+}
 
-    <div class="hamburger" id="hamburger">
-        ☰
-    </div>
-</header>
+.logo-area img {
+    width: 150px;
+}
 
-<!-- NAVBAR DINAMIS -->
-<nav class="navbar-dynamic" id="navbarDynamic">
-    <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Artikel</a></li>
-        <li><a href="#">Resep</a></li>
-        <li><a href="#">Resep Premium</a></li>
-        <li><a href="#">Info</a></li>
-        <li><a href="#">Kontak Kami</a></li>
-    </ul>
+.logo-area {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
 
-    <div class="powered">
-        <img src="Logo/logo-bitter-indo-sisnatama.png" alt="Bitter Indo Sisnatama">
-        <p>Powered By : Bitter Indo Sisnatama</p>
-    </div>
-</nav>
+.logo-area span {
+    color: #d4b000; /* kuning sedikit tua */
+    font-size: 14px;
+}
 
-<!-- HOME -->
-<section class="home">
-    <h1>Selamat Datang di Bitterbar.Universe</h1>
-    <p>Eksplorasi dunia bitters, bar tools, resep, dan pengetahuan profesional.</p>
-</section>
+.hamburger {
+    font-size: 28px;
+    cursor: pointer;
+}
 
-<script src="js/navbar.js"></script>
-</body>
-</html>
+/* NAVBAR DINAMIS */
+.navbar-dynamic {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 260px;
+    background-color: purple;
+    padding: 20px;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.navbar-dynamic ul {
+    list-style: none;
+    margin-top: 80px;
+}
+
+.navbar-dynamic ul li {
+    margin: 15px 0;
+}
+
+.navbar-dynamic ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* LOGO BAWAH */
+.powered {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.powered img {
+    width: 30px;
+}
+
+.powered p {
+    font-size: 12px;
+    color: white;
+}
+
+/* HOME */
+.home {
+    padding: 80px 20px;
+}
+
+/* ANIMATION */
+.scale-in-hor-left {
+    -webkit-animation: scale-in-hor-left 0.5s cubic-bezier(0.645, 0.045, 0.355, 1.000) both;
+    animation: scale-in-hor-left 0.5s cubic-bezier(0.645, 0.045, 0.355, 1.000) both;
+}
+
+@-webkit-keyframes scale-in-hor-left {
+    0% {
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0);
+    }
+    100% {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+    }
+}
+
+@keyframes scale-in-hor-left {
+    0% {
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
