@@ -7,45 +7,44 @@
 </head>
 <body>
 
-<!-- TOP BAR -->
-<header class="topbar">
-    <div id="hamburger">☰</div>
+<!-- HEADER -->
+<header class="header">
+    <div class="hamburger" id="hamburger">☰</div>
+
+    <div class="brand">
+        <img src="Logo/logo-bitterbar-universe.png" alt="Bitterbar Universe">
+        <span>Bitterbar.Universe</span>
+    </div>
 </header>
 
-<!-- SIDE NAV -->
-<nav id="sidenav">
-    <div class="nav-header">
-        <img src="Logo/logo-bitterbar-universe.png">
-        <p>Bitterbar.Universe</p>
-    </div>
+<hr class="divider">
 
-    <ul>
+<!-- SIDEBAR -->
+<nav class="sidebar" id="sidebar">
+    <ul class="menu">
         <li>Home</li>
         <li>Artikel</li>
         <li>Resep</li>
         <li>Resep Premium</li>
+        <li>Template</li>
         <li>Info</li>
-        <li>Kontak Kami</li>
     </ul>
 
-    <div class="nav-footer">
+    <div class="sidebar-footer">
         <img src="Logo/logo-bitter-indo-sisnatama.png">
-        <span>Powered by Bitter Indo Sisnatama</span>
+        <p>Support by : Bitter indo sisnatama</p>
     </div>
 </nav>
 
-<!-- HOME -->
-<section class="home">
-    <img src="Logo/logo-bitterbar-universe.png">
-    <h1>Bitterbar.Universe</h1>
-</section>
+<!-- MAIN CONTENT (kosong dulu sesuai canva) -->
+<main class="content"></main>
 
 <script>
-const btn = document.getElementById("hamburger");
-const nav = document.getElementById("sidenav");
+const hamburger = document.getElementById("hamburger");
+const sidebar = document.getElementById("sidebar");
 
-btn.onclick = () => {
-    nav.classList.toggle("open");
+hamburger.onclick = () => {
+    sidebar.classList.toggle("open");
 };
 </script>
 
