@@ -12,8 +12,10 @@
     gap: 15px;
     padding: 16px;
     background: white;
-    position: relative;
-    z-index: 2;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .hamburger {
@@ -43,6 +45,10 @@
     height: 4px;
     background: #555;
     border: none;
+
+    position: sticky;
+    top: 72px; /* tinggi header */
+    z-index: 99;
 }
 
 /* SIDEBAR */
