@@ -6,108 +6,99 @@
 }
 
 /* TOP BAR */
-.top-bar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+.topbar {
     height: 60px;
-    background-color: #4b1c6f;
+    background: #4b1c6f;
     display: flex;
     align-items: center;
-    padding-left: 15px;
-    z-index: 1001;
+    padding: 0 16px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
 }
 
-.hamburger {
+#hamburger {
     font-size: 28px;
     color: white;
     cursor: pointer;
 }
 
 /* SIDE NAV */
-.side-nav {
+#sidenav {
     position: fixed;
     top: 0;
     left: 0;
     width: 260px;
-    height: 100vh;
-    background-color: #7a0f7a;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.4s ease;
-    z-index: 1000;
+    height: 100%;
+    background: #7a0f7a;
+    transform: translateX(-100%);
+    transition: 0.3s;
+    z-index: 9;
 }
 
-.side-nav.active {
-    transform: scaleX(1);
+#sidenav.open {
+    transform: translateX(0);
 }
 
-/* NAV BRAND */
-.nav-brand {
+/* NAV HEADER */
+.nav-header {
     text-align: center;
     padding: 20px;
 }
 
-.nav-brand img {
-    width: 90px;
+.nav-header img {
+    width: 80px;
 }
 
-.nav-brand h2 {
-    margin-top: 10px;
-    font-size: 18px;
-    font-weight: bold;
+.nav-header p {
     color: #d4b000;
+    font-weight: bold;
 }
 
-/* NAV MENU */
-.nav-menu {
+/* MENU */
+#sidenav ul {
     list-style: none;
-    padding: 0 20px;
+    padding: 20px;
 }
 
-.nav-menu li {
+#sidenav li {
+    color: white;
     margin: 15px 0;
 }
 
-.nav-menu a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-}
-
-/* NAV FOOTER */
+/* FOOTER */
 .nav-footer {
     position: absolute;
     bottom: 20px;
     left: 20px;
     display: flex;
-    align-items: center;
     gap: 8px;
+    align-items: center;
 }
 
 .nav-footer img {
-    width: 30px;
+    width: 28px;
 }
 
-.nav-footer p {
+.nav-footer span {
     font-size: 12px;
     color: white;
 }
 
-/* HOME BRAND */
-.home-brand {
+/* HOME */
+.home {
     margin-top: 100px;
     text-align: center;
 }
 
-.home-brand img {
+.home img {
     width: 180px;
 }
 
-.home-brand h1 {
-    margin-top: 10px;
+.home h1 {
+    color: #d4b000;
     font-size: 32px;
     font-weight: bold;
-    color: #d4b000;
+    margin-top: 10px;
 }
