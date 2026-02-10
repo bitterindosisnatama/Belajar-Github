@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Bitterbar.Universe</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAVBAR STATIC (LOGO + HAMBURGER) -->
+<header class="navbar-top">
+    <div class="logo-area">
+        <img src="Logo/logo-bitterbar-universe.png" alt="Bitterbar Universe Logo">
+        <span>Bitterbar.Universe</span>
+    </div>
+
+    <div class="hamburger" id="hamburger">
+        ☰
+    </div>
+</header>
+
+<!-- NAVBAR DINAMIS -->
+<nav class="navbar-dynamic" id="navbarDynamic">
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Artikel</a></li>
+        <li><a href="#">Resep</a></li>
+        <li><a href="#">Resep Premium</a></li>
+        <li><a href="#">Info</a></li>
+        <li><a href="#">Kontak Kami</a></li>
+    </ul>
+
+    <div class="powered">
+        <img src="Logo/logo-bitter-indo-sisnatama.png" alt="Bitter Indo Sisnatama">
+        <p>Powered By : Bitter Indo Sisnatama</p>
+    </div>
+</nav>
+
+<!-- HOME -->
+<section class="home">
+    <h1>Selamat Datang di Bitterbar.Universe</h1>
+    <p>Eksplorasi dunia bitters, bar tools, resep, dan pengetahuan profesional.</p>
+</section>
+
+<script src="js/navbar.js"></script>
+</body>
+</html>
