@@ -5,100 +5,96 @@
     font-family: Arial, sans-serif;
 }
 
-/* TOP BAR */
-.topbar {
-    height: 60px;
-    background: #4b1c6f;
+/* HEADER */
+.header {
     display: flex;
     align-items: center;
-    padding: 0 16px;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 10;
+    gap: 15px;
+    padding: 16px;
+    background: white;
+    position: relative;
+    z-index: 2;
 }
 
-#hamburger {
-    font-size: 28px;
-    color: white;
+.hamburger {
+    font-size: 26px;
     cursor: pointer;
+    color: #888;
 }
 
-/* SIDE NAV */
-#sidenav {
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.brand img {
+    width: 48px;
+}
+
+.brand span {
+    font-size: 20px;
+    font-weight: bold;
+    color: #e0b400;
+}
+
+/* DIVIDER */
+.divider {
+    height: 4px;
+    background: #555;
+    border: none;
+}
+
+/* SIDEBAR */
+.sidebar {
     position: fixed;
     top: 0;
     left: 0;
     width: 260px;
-    height: 100%;
-    background: #7a0f7a;
+    height: 100vh;
+    background: #7b5a9c;
+    padding: 20px;
     transform: translateX(-100%);
-    transition: 0.3s;
-    z-index: 9;
+    transition: 0.3s ease;
+    z-index: 1;
 }
 
-#sidenav.open {
+.sidebar.open {
     transform: translateX(0);
 }
 
-/* NAV HEADER */
-.nav-header {
-    text-align: center;
-    padding: 20px;
-}
-
-.nav-header img {
-    width: 80px;
-}
-
-.nav-header p {
-    color: #d4b000;
-    font-weight: bold;
-}
-
 /* MENU */
-#sidenav ul {
+.menu {
     list-style: none;
-    padding: 20px;
+    margin-top: 80px;
 }
 
-#sidenav li {
+.menu li {
     color: white;
-    margin: 15px 0;
+    font-size: 16px;
+    margin-bottom: 14px;
 }
 
-/* FOOTER */
-.nav-footer {
+/* SIDEBAR FOOTER */
+.sidebar-footer {
     position: absolute;
     bottom: 20px;
     left: 20px;
     display: flex;
-    gap: 8px;
     align-items: center;
+    gap: 8px;
 }
 
-.nav-footer img {
+.sidebar-footer img {
     width: 28px;
 }
 
-.nav-footer span {
+.sidebar-footer p {
     font-size: 12px;
     color: white;
 }
 
-/* HOME */
-.home {
-    margin-top: 100px;
-    text-align: center;
-}
-
-.home img {
-    width: 180px;
-}
-
-.home h1 {
-    color: #d4b000;
-    font-size: 32px;
-    font-weight: bold;
-    margin-top: 10px;
+/* CONTENT */
+.content {
+    height: 2000px; /* biar kebaca kosongnya */
 }
