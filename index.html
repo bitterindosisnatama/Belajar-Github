@@ -8,47 +8,45 @@
 <body>
 
 <!-- TOP BAR -->
-<header class="top-bar">
-    <div class="hamburger" id="hamburger">☰</div>
+<header class="topbar">
+    <div id="hamburger">☰</div>
 </header>
 
-<!-- NAVBAR DRAWER -->
-<nav class="side-nav" id="sideNav">
-
-    <div class="nav-brand">
-        <img src="Logo/logo-bitterbar-universe.png" alt="Bitterbar Universe">
-        <h2>Bitterbar.Universe</h2>
+<!-- SIDE NAV -->
+<nav id="sidenav">
+    <div class="nav-header">
+        <img src="Logo/logo-bitterbar-universe.png">
+        <p>Bitterbar.Universe</p>
     </div>
 
-    <ul class="nav-menu">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Artikel</a></li>
-        <li><a href="#">Resep</a></li>
-        <li><a href="#">Resep Premium</a></li>
-        <li><a href="#">Info</a></li>
-        <li><a href="#">Kontak Kami</a></li>
+    <ul>
+        <li>Home</li>
+        <li>Artikel</li>
+        <li>Resep</li>
+        <li>Resep Premium</li>
+        <li>Info</li>
+        <li>Kontak Kami</li>
     </ul>
 
     <div class="nav-footer">
-        <img src="Logo/logo-bitter-indo-sisnatama.png" alt="Bitter Indo Sisnatama">
-        <p>Powered by Bitter Indo Sisnatama</p>
+        <img src="Logo/logo-bitter-indo-sisnatama.png">
+        <span>Powered by Bitter Indo Sisnatama</span>
     </div>
-
 </nav>
 
-<!-- HOME BRANDING -->
-<section class="home-brand">
-    <img src="Logo/logo-bitterbar-universe.png" alt="Bitterbar Universe">
+<!-- HOME -->
+<section class="home">
+    <img src="Logo/logo-bitterbar-universe.png">
     <h1>Bitterbar.Universe</h1>
 </section>
 
 <script>
-const hamburger = document.getElementById("hamburger");
-const sideNav = document.getElementById("sideNav");
+const btn = document.getElementById("hamburger");
+const nav = document.getElementById("sidenav");
 
-hamburger.addEventListener("click", () => {
-    sideNav.classList.toggle("active");
-});
+btn.onclick = () => {
+    nav.classList.toggle("open");
+};
 </script>
 
 </body>
