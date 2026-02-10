@@ -114,3 +114,10 @@
         transform: scaleX(1);
     }
 }
+
+.navbar-dynamic {
+    visibility: hidden;
+}
+.navbar-dynamic.active {
+    visibility: visible;
+}
