@@ -6,27 +6,21 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
-    <section class="brand-header">
-    <img src="Logo/logo-bitterbar-universe.png" alt="Bitterbar Universe Logo">
-    <h1>Bitterbar.Universe</h1>
-</section>
 
-<!-- NAVBAR STATIC (LOGO + HAMBURGER) -->
-<header class="navbar-top">
-    <div class="logo-area">
-        <img src="Logo/logo-bitterbar-universe.png" alt="Bitterbar Universe Logo">
-        <span>Bitterbar.Universe</span>
-    </div>
-
-    <div class="hamburger" id="hamburger">
-        ☰
-    </div>
+<!-- TOP BAR -->
+<header class="top-bar">
+    <div class="hamburger" id="hamburger">☰</div>
 </header>
 
-<!-- NAVBAR DINAMIS -->
-<nav class="navbar-dynamic" id="navbarDynamic">
-    <ul>
+<!-- NAVBAR DRAWER -->
+<nav class="side-nav" id="sideNav">
+
+    <div class="nav-brand">
+        <img src="Logo/logo-bitterbar-universe.png" alt="Bitterbar Universe">
+        <h2>Bitterbar.Universe</h2>
+    </div>
+
+    <ul class="nav-menu">
         <li><a href="#">Home</a></li>
         <li><a href="#">Artikel</a></li>
         <li><a href="#">Resep</a></li>
@@ -35,18 +29,27 @@
         <li><a href="#">Kontak Kami</a></li>
     </ul>
 
-    <div class="powered">
+    <div class="nav-footer">
         <img src="Logo/logo-bitter-indo-sisnatama.png" alt="Bitter Indo Sisnatama">
-        <p>Powered By : Bitter Indo Sisnatama</p>
+        <p>Powered by Bitter Indo Sisnatama</p>
     </div>
+
 </nav>
 
-<!-- HOME -->
-<section class="home">
-    <h1>Selamat Datang di Bitterbar.Universe</h1>
-    <p>Eksplorasi dunia bitters, bar tools, resep, dan pengetahuan profesional.</p>
+<!-- HOME BRANDING -->
+<section class="home-brand">
+    <img src="Logo/logo-bitterbar-universe.png" alt="Bitterbar Universe">
+    <h1>Bitterbar.Universe</h1>
 </section>
 
-<script src="js/navbar.js"></script>
+<script>
+const hamburger = document.getElementById("hamburger");
+const sideNav = document.getElementById("sideNav");
+
+hamburger.addEventListener("click", () => {
+    sideNav.classList.toggle("active");
+});
+</script>
+
 </body>
 </html>
